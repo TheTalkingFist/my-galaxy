@@ -1,3 +1,22 @@
+body {
+    background-image: url(images/star-bg.png);
+}
+
+p, h1, h2, h3 {
+    color: white;
+}
+
+#page-title {
+    text-align: center;
+    color: white;
+}
+
+#page-title + p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
 .button {
     image-rendering: pixelated;
     display: flex;
@@ -9,8 +28,25 @@
 
 }
 
+nav {
+    width: fit-content;
+}
+
 .meat {
-    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.leftbar, .rightbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-self: center;
 }
 
 ul {
@@ -53,32 +89,6 @@ li {
   color: white;
 }
 
-.border-wrapper {
-    position: relative;
-    margin: auto;
-    margin-top: 3%;
-    max-width: 72%;
-    padding: 24px;
-    background: black;
-}
-
-.border-wrapper::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-
-    background:
-        /* top */
-        url(images/blackHeart.gif) top left / 24px 24px repeat-x,
-        /* bottom */
-        url(images/blackHeart.gif) bottom left / 24px 24px repeat-x,
-        /* left (shifted down 24px) */
-        url(images/blackHeart.gif) left 24px top 24px / 24px 24px repeat-y,
-        /* right (shifted down 24px) */
-        url(images/blackHeart.gif) right 24px top 24px / 24px 24px repeat-y;
-}
-
 .main-content {
     margin: 32px;
     padding: 15px;
@@ -89,4 +99,21 @@ li {
 @keyframes marquee {
     0% {transform: translate(0, 0)}
     100% {transform: translate(-50%, 0)}
+}
+
+#markdown-article {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid white;
+}
+
+#markdown-content {
+    padding: 10px;
+    text-align: left;
+    color: white;
+    background-color: rgb(2, 2, 72);
 }
