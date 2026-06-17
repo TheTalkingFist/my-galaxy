@@ -34,11 +34,14 @@ nav {
 
 .meat {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr;
 
     width: 80%;
     margin: 0 auto;
+
+    border: 5px ridge white;
+    padding: 5px;
 }
 
 .leftbar, .rightbar {
@@ -48,6 +51,17 @@ nav {
 
     justify-self: center;
 }
+
+.main {
+    background-color: navy;
+    border: 2px ridge white;
+    padding: 5px;
+}
+
+.main :is(h1, h2, h3) {
+    text-align: center;
+}
+
 
 ul {
     list-style-type: none;
